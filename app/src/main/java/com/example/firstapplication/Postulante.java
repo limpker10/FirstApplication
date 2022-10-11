@@ -13,24 +13,36 @@ public class Postulante {
     private String edtColegio;
     private String edtCarrera;
 
-    public Postulante(EditText edtNombres, EditText edtPaterno, EditText edtMaterno, EditText edtFecNacimiento, EditText edtColegio, EditText edtCarrera) {
-        this.edtNombres = edtNombres.getText().toString();
-        this.edtPaterno = edtPaterno.getText().toString();
-        this.edtMaterno = edtMaterno.getText().toString();
-        this.edtFecNacimiento = edtFecNacimiento.getText().toString();
-        this.edtColegio = edtColegio.getText().toString();
-        this.edtCarrera = edtCarrera.getText().toString();
+    public Postulante(String edtNombres, String edtPaterno, String edtMaterno, String edtFecNacimiento, String edtColegio, String edtCarrera) {
+        this.edtNombres = edtNombres;
+        this.edtPaterno = edtPaterno;
+        this.edtMaterno = edtMaterno;
+        this.edtFecNacimiento = edtFecNacimiento;
+        this.edtColegio = edtColegio;
+        this.edtCarrera = edtCarrera;
     }
 
+    public static Postulante createPostulante(EditText form [] ){
+
+        return new Postulante(
+                form[0].getText().toString(),
+                form[1].getText().toString(),
+                form[2].getText().toString(),
+                form[3].getText().toString(),
+                form[4].getText().toString(),
+                form[5].getText().toString()
+        );
+
+    }
     @Override
     public String toString() {
         return "Postulante{" +
-                "edtNombres='" + edtNombres + '\'' +
-                ", edtPaterno='" + edtPaterno + '\'' +
-                ", edtMaterno='" + edtMaterno + '\'' +
-                ", edtFecNacimiento='" + edtFecNacimiento + '\'' +
-                ", edtColegio='" + edtColegio + '\'' +
-                ", edtCarrera='" + edtCarrera + '\'' +
+                "edtNombres='" + edtNombres + '\n' +
+                ", edtPaterno='" + edtPaterno + '\n' +
+                ", edtMaterno='" + edtMaterno + '\n' +
+                ", edtFecNacimiento='" + edtFecNacimiento + '\n' +
+                ", edtColegio='" + edtColegio + '\n' +
+                ", edtCarrera='" + edtCarrera + '\n' +
                 '}';
     }
 }

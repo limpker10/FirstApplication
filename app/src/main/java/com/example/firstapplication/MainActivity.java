@@ -9,24 +9,39 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
     private static String TAG = "MainActivity";
+
+    private void resetForm(EditText form [], TextView txtMensaje) throws InterruptedException {
+        TimeUnit.SECONDS.sleep(1);
+
+        for (int i = 0; i < form.length; i++) {
+            form[i].setText("");
+        }
+        txtMensaje.setText("");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ArrayList<Postulante> registro = new ArrayList<Postulante>();
+        EditText form [] = {
+                findViewById(R.id.editNombres),
+                findViewById(R.id.editPaterno),
+                findViewById(R.id.editMaterno),
+                findViewById(R.id.editFecNacimiento),
+                findViewById(R.id.editColegio),
+                findViewById(R.id.editCarrera),
+        };
 
-        EditText edtNombres = findViewById(R.id.editNombres);
-        EditText edtPaterno = findViewById(R.id.editPaterno);
-        EditText edtMaterno = findViewById(R.id.editMaterno);
-        EditText edtFecNaci = findViewById(R.id.editFecNacimiento);
-        EditText edtColegio = findViewById(R.id.editColegio);
-        EditText edtCarrera = findViewById(R.id.editCarrera);
+
         TextView txtMensaje = findViewById(R.id.txtMensaje);
         Button btnRegistrar = (Button) findViewById(R.id.btnRegistro);
         Button btnVerLista = (Button) findViewById(R.id.btnListaPostulantes);
@@ -35,7 +50,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 txtMensaje.setText("Registro  Exitoso");
-                registro.add(new Postulante(edtNombres,edtPaterno,edtMaterno,edtFecNaci,edtColegio,edtCarrera));
+                registro.add(Postulante.createPostulante(form));
+                try {
+                    resetForm(form,txtMensaje);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
         btnVerLista.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +69,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         /**
+         * EditText edtNombres = findViewById(R.id.editNombres);
+         *         EditText edtPaterno = findViewById(R.id.editPaterno);
+         *         EditText edtMaterno = findViewById(R.id.editMaterno);
+         *         EditText edtFecNaci = findViewById(R.id.editFecNacimiento);
+         *         EditText edtColegio = findViewById(R.id.editColegio);
+         *         EditText edtCarrera = findViewById(R.id.editCarrera);
+         *         TextView txtMensaje = findViewById(R.id.txtMensaje);
         EditText edtUsuario = findViewById(R.id.edtUsuario);
         EditText edtPassword = findViewById(R.id.edtPassword);
         TextView txtMensaje = findViewById(R.id.txtMensaje);
