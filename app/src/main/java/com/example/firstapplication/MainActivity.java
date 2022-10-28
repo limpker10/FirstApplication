@@ -12,11 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Clase estatica log, para imprimir en consola
-        Log.i("info","Informacion"); //info
-        Log.d("Debug","valor Debug"); // debug
-        Log.w("warning","Valor Warning");
-        Log.e("Error","Valor Error");
-        Log.v("Verbose","Valor Verbose");
+
+        //Log.i("info","Informacion");
     }
 }
