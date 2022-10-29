@@ -1,7 +1,8 @@
 package com.example.myapplication;
 import android.widget.EditText;
+import java.io.Serializable;
 
-public class Postulante {
+public class Postulante implements Serializable{
 
     public String dni;
     public String edtNombres;

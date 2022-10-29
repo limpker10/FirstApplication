@@ -18,10 +18,11 @@ public class ActivityPostulanteInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postulante_info);
 
+        // Recibiendo lista de postulantes
 
-        ArrayList<Postulante> registro = new ArrayList<Postulante>();
+        ArrayList<Postulante> registro = (ArrayList<Postulante>) getIntent().getSerializableExtra("lista");
 
-        //para probar funcionamiento
+        //Nuevo postulante de prueba
         Postulante p1 = new Postulante("Luis",
                 "Condori", "Villalba",
                 "01/01/2001", "San Francisco",

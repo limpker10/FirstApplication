@@ -47,12 +47,17 @@ public class Activity_PostulanteRegistro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Registro  Exitoso
-                registro.add(Postulante.createPostulante(form));
+                Postulante nuevoPostulante = Postulante.createPostulante(form);
+                //registro.add(Postulante.createPostulante(form));
                 try {
                     resetForm(form);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                //Enviando datos del formulario al Activity_Menu
+                Intent intent = new Intent(getApplicationContext(), ActivityMenu.class);
+                intent = intent.putExtra("dato",nuevoPostulante);
+                startActivity(intent);
             }
         });
 
