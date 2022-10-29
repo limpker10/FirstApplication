@@ -2,7 +2,7 @@
 
 - Practicas de laboratorio enfocadas al desarrollo de aplicaciones Mobiles utilizando el entorno de desarrollo integrado oficial para la plataforma Android, Android Studio.
 
-####Integrantes
+#### Integrantes
                 
 1. Jose Miguel Cano Vilcapaza
 2. Castillo Rojas Jairo Miguel
