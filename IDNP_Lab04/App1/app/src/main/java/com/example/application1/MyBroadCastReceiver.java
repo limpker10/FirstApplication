@@ -13,7 +13,6 @@ public class MyBroadCastReceiver extends BroadcastReceiver {
         // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
         Log.i("BroadcastReceiver", "Broadcast message into same app is received");
-        Toast.makeText(context, "Broadcast message into same app is received", Toast.LENGTH_LONG).show();
-
+        Toast.makeText(context, intent.getStringExtra("mensaje"), Toast.LENGTH_LONG).show();
     }
 }

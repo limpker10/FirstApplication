@@ -20,6 +20,9 @@
                 <action android:name="com.Sending.Message.Sameapp">
 
                 </action>
+                <action android:name="com.MyBroadcastMessage">
+
+                </action>
             </intent-filter>
         </receiver>
 
