@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FirstApp</string>
+    <string name="buttonLogin">Login</string>
+    <string name="autenticationText">Autentication</string>
+    <string name="ingrese_usuario">Please enter a valid username</string>
+    <string name="ingrese_password">Please enter a valid user password</string>
+    <string name="mensajeError">...</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="logo_epis">logo_epis</string>
+</resources>
