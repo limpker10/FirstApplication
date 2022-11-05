@@ -11,8 +11,9 @@ public class MyBroadCastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving
-        // an Intent broadcast.
-        Log.i("BroadcastReceiver", "Broadcast message into same app is received");
-        Toast.makeText(context, intent.getStringExtra("mensaje"), Toast.LENGTH_LONG).show();
+        Log.i("BroadcastReceiver", intent.getStringExtra("mensaje"));
+        Toast.makeText(context,"Broadcast message into same app is received", Toast.LENGTH_LONG).show();
+
+
     }
 }

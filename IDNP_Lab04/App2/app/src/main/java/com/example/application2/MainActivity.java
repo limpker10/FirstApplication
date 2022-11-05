@@ -15,12 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public void onBroadcastSentBtn(View v) {
+    public void onBroadcastSentBtn(View view) {
         EditText mensaje = findViewById(R.id.editMensaje);
         String txt = mensaje.getText().toString();
         Intent intent = new Intent();
-        intent.setAction("com.MyBroadcastMessage");
+        intent.setAction("com.sendBroadcastMessage");
         intent.putExtra("mensaje",txt);
+        intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         sendBroadcast(intent);
     }
 }
