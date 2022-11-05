@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_menu"
+    android:orientation="vertical"
     tools:context=".ActivityMenu">
 
     <Button
         android:id="@+id/buttonRegistrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
         android:layout_marginTop="128dp"
-        android:text="Nuevo"
+        android:text="Registrar"
         android:textSize="20sp"
+        app:icon="@drawable/icono_boton_registrar"
         app:layout_constraintBottom_toTopOf="@+id/buttonInfoPostulante"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -23,11 +25,12 @@
 
     <Button
         android:id="@+id/buttonInfoPostulante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
         android:layout_marginBottom="340dp"
         android:text="Info. Postulante"
         android:textSize="20sp"
+        app:icon="@drawable/icono_boton_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
