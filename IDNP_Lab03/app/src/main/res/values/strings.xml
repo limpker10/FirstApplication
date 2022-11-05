@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">FirstApp</string>
     <string name="buttonLogin">Login</string>
     <string name="autenticationText">Autentication</string>
     <string name="ingrese_usuario">Please enter a valid username</string>
