@@ -13,16 +13,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        IntentFilter intentFilter = new IntentFilter("com.Sending.Message.Sameapp");
-        IntentFilter intentFilter1 = new IntentFilter("com.MyBroadcastMessage");
+        IntentFilter intentFilterApp1 = new IntentFilter("com.Sending.Message.Sameapp");
+        IntentFilter intentFilterApp2 = new IntentFilter("com.sendBroadcastMessage");
         MyBroadCastReceiver objReceiver = new MyBroadCastReceiver();
-        registerReceiver(objReceiver, intentFilter1 );
-        registerReceiver(objReceiver, intentFilter );
+        registerReceiver(objReceiver, intentFilterApp1 );
+        registerReceiver(objReceiver, intentFilterApp2 );
     }
 
     public void broadCastSendBtnClick(View view) {
         Intent intent = new Intent();
         intent.setAction("com.Sending.Message.Sameapp");
+        intent.putExtra("mensaje","Broadcast message into same app is received");
         intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         sendBroadcast(intent);
     }
