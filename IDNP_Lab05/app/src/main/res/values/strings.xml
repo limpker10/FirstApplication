@@ -8,4 +8,23 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="logo_epis">logo_epis</string>
+    <string name="editNombre">Ingrese su nombre</string>
+    <string name="editPaterno">Ingrese apellido paterno</string>
+    <string name="editMaterno">Ingrese apellido materno</string>
+    <string name="editDNI">Ingrese DNI</string>
+    <string name="editFecha">Ingrese Fecha de nacimiento</string>
+    <string name="editColegio">Ingrese Colegio</string>
+    <string name="editCarrera">Ingrese Carrera</string>
+    <string name="registro_de_datos_postulante">Registro de datos Postulante</string>
+    <string name="apellido_paterno">Apellido Paterno :</string>
+    <string name="carrera_a_postular">Carrera a Postular</string>
+    <string name="colegio">Colegio</string>
+    <string name="fechanacimiento">FechaNacimiento :</string>
+    <string name="apellido_materno">Apellido Materno :</string>
+    <string name="nombres">Nombres :</string>
+    <string name="dni">DNI</string>
+    <string name="registrar">Registrar</string>
+    <string name="informacion_de_postulantes">INFORMACION DE POSTULANTES</string>
+
+
 </resources>

@@ -60,6 +60,7 @@
             android:minHeight="48dp"
             android:textColorHint="#757575"
             android:autofillHints=""
+            android:textColor="@color/white"
             />
 
         <Space
@@ -84,7 +85,7 @@
             android:minHeight="48dp"
             android:textColorHint="#757575"
             android:autofillHints=""
-
+            android:textColor="@color/white"
             />
 
 
