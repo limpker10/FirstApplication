@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".Ejercicio2">
 
+    <FrameLayout
+        android:id="@+id/contenedorArriba"
+        android:layout_width="match_parent"
+        android:layout_height="371dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/contenedorAbajo"
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorArriba">
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
