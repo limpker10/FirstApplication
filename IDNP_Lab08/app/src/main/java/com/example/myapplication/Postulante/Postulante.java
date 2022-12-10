@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Postulante;
 import android.widget.EditText;
 import java.io.Serializable;
 
@@ -32,5 +32,16 @@ public class Postulante implements Serializable{
                 form[5].getText().toString(),
                 form[6].getText().toString()
         );
+    }
+
+    @Override
+    public String toString() {
+        return edtNombres + "--" +
+               edtPaterno + "--" +
+               edtMaterno + "--" +
+               edtFecNacimiento + "--" +
+               edtColegio + "--" +
+               edtCarrera + "--" +
+               dni;
     }
 }

@@ -54,13 +54,13 @@
             android:id="@+id/edtUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/ingrese_usuario"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:textColorHint="#757575"
-            android:autofillHints=""
-            />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#757575" />
 
         <Space
             android:layout_width="match_parent"
@@ -78,14 +78,14 @@
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="@string/ingrese_password"
-            android:minHeight="48dp"
-            android:textColorHint="#757575"
             android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/ingrese_password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
 
-            />
+            android:textColorHint="#757575" />
 
 
     </LinearLayout>

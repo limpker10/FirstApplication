@@ -8,12 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.myapplication.Postulante.Postulante;
+
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Activity_PostulanteRegistro extends AppCompatActivity {
 
     private static String TAG = "Activity_PostulanteRegistro";
+
+    //para hacer un almacenamiento interno================
+    private MyHelper helper;
+    //===================================================
 
     private void resetForm(EditText form[]) throws InterruptedException {
         TimeUnit.SECONDS.sleep(1);
@@ -27,6 +33,10 @@ public class Activity_PostulanteRegistro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postulante_registro);
+
+        //para hacer un almacenamiento interno================
+        helper = new MyHelper(this);
+        //====================================================
 
         ArrayList<Postulante> registro = new ArrayList<Postulante>();
         EditText form[] = {
@@ -48,15 +58,19 @@ public class Activity_PostulanteRegistro extends AppCompatActivity {
             public void onClick(View view) {
                 //Registro  Exitoso
                 Postulante nuevoPostulante = Postulante.createPostulante(form);
-                //registro.add(Postulante.createPostulante(form));
+
                 try {
                     resetForm(form);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+
+                //para hacer un almacenamiento interno================
+                helper.writeData(nuevoPostulante);
+                //===================================================
+
                 //Enviando datos del formulario al Activity_Menu
                 Intent intent = new Intent(getApplicationContext(), ActivityMenu.class);
-                intent = intent.putExtra("dato",nuevoPostulante);
                 startActivity(intent);
             }
         });

@@ -9,9 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.myapplication.Postulante.Postulante;
+
 import java.util.ArrayList;
 
 public class ActivityPostulanteInfo extends AppCompatActivity {
+
+    ArrayList<Postulante> registro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +23,11 @@ public class ActivityPostulanteInfo extends AppCompatActivity {
         setContentView(R.layout.activity_postulante_info);
 
         // Recibiendo lista de postulantes
+        //================================================
+        MyHelper helper = new MyHelper(this);
+        registro = helper.readData();
 
-        ArrayList<Postulante> registro = (ArrayList<Postulante>) getIntent().getSerializableExtra("lista");
-
-        //Nuevo postulante de prueba
-        Postulante p1 = new Postulante("Luis",
-                "Condori", "Villalba",
-                "01/01/2001", "San Francisco",
-                "Ingenieria de Sistemas", "72800700");
-
-        registro.add(p1);
+        //================================================
 
         EditText buscarTexto = findViewById(R.id.editTextSearch);
         TextView txtDNI = findViewById(R.id.textDNI);
@@ -45,8 +44,7 @@ public class ActivityPostulanteInfo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for (int i = 0; i < registro.size(); i++) {
-                    if(buscarTexto.getText().toString().equals(registro.get(i).dni))
-                    {
+                    if (buscarTexto.getText().toString().equals(registro.get(i).dni)) {
                         txtDNI.setText(txtDNI.getText() + registro.get(i).dni);
                         txtApellidos.setText(txtApellidos.getText() + registro.get(i).edtPaterno + ' ' + registro.get(i).edtMaterno);
                         txtFechaN.setText(txtFechaN.getText() + registro.get(i).edtFecNacimiento);
@@ -55,7 +53,7 @@ public class ActivityPostulanteInfo extends AppCompatActivity {
                         txtColegio.setText(txtColegio.getText() + registro.get(i).edtColegio);
                         break;
                     }
-                    if (i == registro.size()-1){
+                    if (i == registro.size() - 1) {
                         txtDNI.setText("DNI: ");
                         txtApellidos.setText("Apellidos: ");
                         txtFechaN.setText("Fecha de Nacimiento: ");
@@ -70,7 +68,7 @@ public class ActivityPostulanteInfo extends AppCompatActivity {
         btnAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ActivityMenu.class);
+                Intent intent = new Intent(getApplicationContext(), ActivityPostulanteList.class);
                 startActivity(intent);
             }
         });
