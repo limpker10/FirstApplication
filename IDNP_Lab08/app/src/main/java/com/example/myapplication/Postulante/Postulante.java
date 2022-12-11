@@ -44,4 +44,14 @@ public class Postulante implements Serializable{
                edtCarrera + "--" +
                dni;
     }
+
+    public String printData(){
+        return "Nombres: " + edtNombres + "\n" +
+                "Paterno: " + edtPaterno + "\n" +
+                "Materno: " + edtMaterno + "\n" +
+                "Fecha de Nacimiento: " + edtFecNacimiento + "\n" +
+                "Colegio: " + edtColegio + "\n" +
+                "Carrera: " + edtCarrera + "\n" +
+                "DNI: " + dni;
+    }
 }

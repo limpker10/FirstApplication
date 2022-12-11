@@ -76,7 +76,7 @@ public class FragmentListPostulante extends Fragment {
                 RecyclerView.VERTICAL, false));
 
         //enviamos los datos al adaptador
-        AdapterPostulante adapter = new AdapterPostulante(registro);
+        AdapterPostulante adapter = new AdapterPostulante(registro, getActivity());
 
         //por ultimo al recycler le enviamos el adaptador
         recycler.setAdapter(adapter);
@@ -90,7 +90,7 @@ public class FragmentListPostulante extends Fragment {
                 listPostulantesBuscados.add(registro.get(i));
             }
         }
-        AdapterPostulante adapter = new AdapterPostulante(listPostulantesBuscados);
+        AdapterPostulante adapter = new AdapterPostulante(listPostulantesBuscados, getActivity());
         //por ultimo al recycler le enviamos el adaptador
         recycler.setAdapter(adapter);
     }

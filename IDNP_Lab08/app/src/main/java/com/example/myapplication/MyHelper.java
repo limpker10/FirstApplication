@@ -50,7 +50,6 @@ public class MyHelper{
         String dataPostulante="";
         Postulante p;
         //===============================
-
         try {
             FileInputStream fin = this.activity.openFileInput(filename);
             int a;
@@ -58,20 +57,16 @@ public class MyHelper{
             while ((a = fin.read()) != -1) {
                 if(a == '\n'){
                     dataPostulante = temp.toString();
-
                     //limpiamos el buffer
                     temp = new StringBuilder();
-
                     p = converterDataToPost(dataPostulante);
                     //agregamos postulante a lista
                     listaGenerada.add(p);
-
                 }else {
                     temp.append((char) a);
                 }
             }
             fin.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

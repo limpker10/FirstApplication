@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <com.example.myapplication.View.Rectangulo
-            android:id="@+id/rectanguloView"
+            android:id="@+id/contentViewItemPostulante"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:layout_marginLeft="40dp"
@@ -30,22 +30,22 @@
             android:layout_marginStart="96dp"
             android:text="Postulante n"
             android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="@+id/rectanguloView"
+            app:layout_constraintBottom_toBottomOf="@+id/contentViewItemPostulante"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.059"
-            app:layout_constraintStart_toStartOf="@+id/rectanguloView"
-            app:layout_constraintTop_toTopOf="@+id/rectanguloView"
+            app:layout_constraintStart_toStartOf="@+id/contentViewItemPostulante"
+            app:layout_constraintTop_toTopOf="@+id/contentViewItemPostulante"
             app:layout_constraintVertical_bias="0.529" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="44dp"
             android:layout_height="39dp"
-            app:layout_constraintBottom_toBottomOf="@+id/rectanguloView"
+            app:layout_constraintBottom_toBottomOf="@+id/contentViewItemPostulante"
             app:layout_constraintEnd_toStartOf="@+id/idTextNamePostulante"
             app:layout_constraintHorizontal_bias="0.688"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/rectanguloView"
+            app:layout_constraintTop_toTopOf="@+id/contentViewItemPostulante"
             app:srcCompat="@drawable/ic_baseline_person_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
