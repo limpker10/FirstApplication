@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Context;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import com.example.myapplication.Postulante.Postulante;
 
@@ -15,9 +16,9 @@ public class MyHelper{
 
     private String filename;
 
-    AppCompatActivity activity;
+    FragmentActivity activity;
 
-    public MyHelper(AppCompatActivity activity){
+    public MyHelper(FragmentActivity activity){
         this.activity = activity;
         this.filename = "demoFile.txt";
     }

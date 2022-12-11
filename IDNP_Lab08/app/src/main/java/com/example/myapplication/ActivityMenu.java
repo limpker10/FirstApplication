@@ -41,7 +41,7 @@ public class ActivityMenu extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             //Enviando datos del formulario al Activity_PostulanteInfo
-            Intent intent = new Intent(getApplicationContext(), ActivityPostulanteList.class);
+            Intent intent = new Intent(getApplicationContext(), ActivityPostulanteInfo.class);
             startActivity(intent);
         }
     };
